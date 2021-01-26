@@ -2,7 +2,10 @@ import itertools
 import numpy as np
 from copy import copy, deepcopy
 count = 0
-
+#----------------------------------NOTE-----------------------------------------------------------------------------------------
+#This solution only passes the first 4 test cases of this level. I believe that the core logic is correct, however the algorithm
+#is not efficient enough to pass in the allowed amount of time :(
+#--------------------------------------------------------------------------------------------------------------------------------
 cell_true = [
     [1, 0,
     0, 0],
@@ -41,7 +44,7 @@ cell_false = [
     1, 1]
 ]
 
-#this implementation is als more sophisticated brute force solution. Basically each group of values is checked for compatability with surrounding groups.
+#this implementation is a more sophisticated brute force solution. Basically each group of values is checked for compatability with surrounding groups.
 #if a possible configuration works with the surrounding cell, the function is recursively called for the next index and the function continues.
 #if not, the function returns and the previous cell continues to list through the options.
 #base case: the bottom right cell is called and if a match is found, it can be assumed that all other indices have matching possible options, therfore a match with the given matrix has been found
